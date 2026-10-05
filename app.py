@@ -160,5 +160,4 @@ if st.button("Predict"):
     if prediction[0]==1:
         st.success("Survived")
     else:
->>>>>>> fec5f2d18827fda6a28977b11b4cc8ab842eb861
          st.error("Not Survived")
