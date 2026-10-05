@@ -78,7 +78,7 @@ if st.button("Predict"):
     if prediction[0]==1:
         st.success("Survived")
     else:
-=======
+         st.error("Not Survived")
 import streamlit as st
 import pandas as pd
 import joblib
