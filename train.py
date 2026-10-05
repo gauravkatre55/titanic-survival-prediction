@@ -43,7 +43,7 @@ model=RandomForestClassifier(
 )
 
 # Complete Ml Pipline:
-Pipeline=Pipeline(
+pipeline=Pipeline(
     steps=[
         ('preprocessor',preprocessor),
         ('model',model)
@@ -53,11 +53,11 @@ Pipeline=Pipeline(
 # train test split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=42)
 
-Pipeline.fit(x_train,y_train)
-y_pred=Pipeline.predict(x_test)
+pipeline.fit(x_train,y_train)
+y_pred=pipeline.predict(x_test)
 
 # Accuracy
-pipeline_score=Pipeline.score(x_test,y_test)
+pipeline_score=pipeline.score(x_test,y_test)
 print('score:-',pipeline_score)
 from sklearn.metrics import accuracy_score
 accuracy=accuracy_score(y_test,y_pred)
@@ -65,6 +65,6 @@ print('Accuracy:-',accuracy)
 
 # model pickle :- save the model in pickel file
 with open('model.pkl','wb') as f:
-    joblib.dump(Pipeline,f)
+    joblib.dump(pipeline,f)
     
-print('model saved')
+print('Model saved successfully!')
