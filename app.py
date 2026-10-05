@@ -7,10 +7,10 @@ with open('model.pkl','rb') as f:
     model=joblib.load(f)
     
 # frontend page
-    
+
 st.set_page_config(
-    page_title="Model Deployment",
-    page_icon="✅",
+    page_title="Titanic Survival Prediction",
+    page_icon="🚢",
 )
 
 st.title("Titanic Survival Prediction")
